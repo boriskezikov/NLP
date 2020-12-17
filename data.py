@@ -105,5 +105,3 @@ ex_word = ['влксм', 'ссср', 'алтая', 'башкирии', 'буря
 name = ['first', 'last', 'middle']
 ending_ex = ['я', 'й', 'ая', 'ий', 'ой', 'ое']
 
-SIMPLE_CITIES = [city.lower() for city in city_test if city.find('-') == -1 and city.find(' ') == -1]
-COMPLEX_CITIES = [city.lower() for city in city_test if city.find('-') != -1 or city.find(' ') != -1]

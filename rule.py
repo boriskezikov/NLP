@@ -6,6 +6,9 @@ from yargy.tokenizer import QUOTES
 from Lab2.data import *
 from Lab2.constants import *
 
+SIMPLE_CITIES = [city.lower() for city in city_test if city.find('-') == -1 and city.find(' ') == -1]
+COMPLEX_CITIES = [city.lower() for city in city_test if city.find('-') != -1 or city.find(' ') != -1]
+
 Address = fact('Address', get_address_schema())
 
 CITY_NAME = or_(rule(dictionary(SIMPLE_CITIES)), morph_pipeline(COMPLEX_CITIES)).interpretation(Address.city)
